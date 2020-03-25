@@ -9,10 +9,10 @@ class Footer extends Component {
 
   render() {
     return (
-      <div class="footer-box">
+      <div className="footer-box">
         <p id="copyright">2020 © We Are Marketing</p>
         <img
-          class="logo"
+          className="logo-footer"
           src="https://hubspot-partners-prod.s3.amazonaws.com/thumbnails/427994/500.jpeg"
           alt="WAM We Are Marketing"
         />

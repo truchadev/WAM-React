@@ -1,12 +1,13 @@
-import React from 'react';
-import {BrowserRouter, Switch, Route} from 'react-router-dom';
+import React from "react";
+import {BrowserRouter, Switch, Route} from "react-router-dom";
+import Payment from "./container/Payment";
 
 function Router(){
 
     return(
     <BrowserRouter>
         <Switch>
-           <Route path='/'  />
+           <Route path='/' component={Payment} />
         </Switch>
     </BrowserRouter>
     )
