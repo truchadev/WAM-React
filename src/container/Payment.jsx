@@ -1,9 +1,12 @@
 import React, { Component, Fragment } from "react";
+import { Link } from "react-router-dom";
+
+//Components
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import "./styles/Payment.scss";
 
-import { Redirect } from 'react-router-dom';
+//CSS
+import "./styles/Payment.scss";
 
 class Payment extends Component {
   constructor() {
@@ -23,12 +26,6 @@ class Payment extends Component {
       [name]: value
     });
   };
-
-  renderRedirect = () => {
-    if (this.state.redirect) {
-        return <Redirect to='/confirmation' />
-    }
-}
 
   render() {
     return (
@@ -60,17 +57,19 @@ class Payment extends Component {
                 </div>
                 <div>
                   <div className="input-box">
-                    <label for>Nombre</label>
+                    <label>Nombre</label>
                     <input type="text" onChange={(ev) => this.handleChange(ev)} />
                   </div>
                   <div className="input-box">
-                    <label for>Apellidos</label>
+                    <label>Apellidos</label>
                     <input type="text" onChange={(ev) => this.handleChange(ev)} />
                   </div>
                   <div>
-                    <button class="button-form" onClick={() => this.renderRedirect()} >
-                      Continuar <i class="far fa-arrow-alt-circle-right"></i>  
+                    <Link to={"/confirmation"}>
+                    <button className="button-form" type="button">
+                      Continuar <i className="far fa-arrow-alt-circle-right"></i>  
                     </button>
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -1,34 +1,18 @@
 import React, { Component, Fragment } from "react";
+import { Link } from "react-router-dom";
+
+//Components
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import "./styles/Confirmation.scss";
 
-import { Redirect } from "react-router-dom";
+//CSS
+import "./styles/Confirmation.scss";
 
 class Confirmation extends Component {
   constructor() {
     super();
-    this.state = {
-      name: "",
-      surename: ""
-    };
+    this.state = {};
   }
-
-  handleChange = event => {
-    const target = event.target;
-    const value = target.value;
-    const name = target.name;
-
-    this.setState({
-      [name]: value
-    });
-  };
-
-  renderRedirect = () => {
-    if (this.state.redirect) {
-      return <Redirect to="/" />;
-    }
-  };
 
   render() {
     return (
@@ -76,19 +60,17 @@ class Confirmation extends Component {
                     />
                   </div>
                   <div className="buttons-box">
-                    <button
-                      className="button-form-back"
-                      onClick={() => this.renderRedirect()}
-                    >
-                      <i class="far fa-arrow-alt-circle-left fa-1.5x"></i>
-                      Anterior
+                    <Link to={"/payment"}>
+                      <button className="button-form-back">
+                        <i class="far fa-arrow-alt-circle-left fa-1.5x"></i>
+                        Anterior
+                      </button>
+                    </Link>
+                    <Link to={"/paid"}>
+                    <button class="button-form" type="button">
+                      Continuar <i class="far fa-arrow-alt-circle-right"></i>  
                     </button>
-                    <button
-                      className="button-form"
-                      onClick={() => this.renderRedirect()}
-                    >
-                      Pagar <i class="far fa-arrow-alt-circle-right"></i>
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>

@@ -9,7 +9,7 @@ class Header extends Component {
 
   render() {
     return (
-      <div class="header-box">
+      <div className="header-box">
         <img
           className="logo"
           src="https://hubspot-partners-prod.s3.amazonaws.com/thumbnails/427994/500.jpeg"
@@ -17,13 +17,13 @@ class Header extends Component {
         />
         
         <div className="menu">
-          <a href="/ayuda">
+          <a className="a-menu" href="/">
             <i className="far fa-file-alt"></i> AYUDA
           </a>
-          <a href="/signIn">
+          <a className="a-menu" href="/">
             <i className="far fa-user"></i> SIGN IN
           </a>
-          <a>
+          <a className="a-menu" href="/">
             ES
             <i className="fas fa-sort-down"></i>
           </a>

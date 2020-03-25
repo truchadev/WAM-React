@@ -1,0 +1,30 @@
+.paid-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  background-color: white;
+  width: 30vw;
+  padding: 8em 15em 8em 15em;
+  margin-bottom: 5%;
+  box-shadow: 1px 1px 5px rgb(216, 216, 216);
+  font-size: 14px;
+}
+
+// Responsive
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  .paid-box {
+    box-shadow: none;
+    width: 100vw;
+    padding: 8em 2em 8em 2em;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 767px) {
+  .paid-box {
+    box-shadow: none;
+    padding: 8em 10em 8em 10em;
+  }
+}

@@ -4,6 +4,7 @@
     background-color: rgb(243, 243, 243);
   }
   
+
   /* Payment phases */
   
   .phases-box {
@@ -47,6 +48,7 @@
     text-align: center;
   }
   
+
   /* FORM */
   
   form {
@@ -57,8 +59,8 @@
 
   .confirmation-box {
     background-color: white;
-    padding: 1.5em;
     text-align: -webkit-center;
+    padding: 1em;
   }
   
   .card-box {
@@ -84,6 +86,7 @@
   .buttons-box {
     display: flex;
     justify-content: space-evenly;
+    padding-bottom: 1em;;
   }
 
   .button-form-back {
@@ -92,6 +95,7 @@
     border: rgb(31, 145, 221) 2px solid
   }
 
+  
   // Responsive
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
@@ -115,6 +119,10 @@
     padding: 0;
   }
 
+  .confirmation-box{
+    padding-left: 1em;
+    padding-right: 1em;
+  }
 }
 
 @media only screen and (min-width: 480px) and (max-width: 767px) {
@@ -131,6 +139,4 @@
     padding: 2em;
     width: 100%;
   }
-
-  
 }
